@@ -1,2 +1,3 @@
 # topham
-Topham protects us from confusion and delay.
+
+Topham informs us of confusion and delays.
