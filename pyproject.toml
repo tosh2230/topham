@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "topham"
+version = "0.1.0"
+description = "Topham informs us of confusion and delays."
+authors = ["tosh2230 <rev.to12@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "^22.6.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+mypy = "^0.961"
+pytest = "^7.1.2"
+pytest-cov = "^3.0.0"
+pytest-mock = "^3.8.2"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.mypy]
+check_untyped_defs = true
+ignore_missing_imports = true
+no_strict_optional = true
+
+[tool.pytest.ini_options]
+addopts = "-rsxX -l --strict-markers"
+norecursedirs = "*.egg .* _darcs build CVS dist node_modules venv {arch} img scripts src"
+xfail_strict = true
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
