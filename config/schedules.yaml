@@ -1,0 +1,9 @@
+test_schedule:
+  description: This is a test schedule.
+  table_pattern: ^test_.+$
+  event_pattern: ^.+\.create$
+  notification_key: slack_private
+  job_delay_threshold: 0
+  job_first_invoke_at: "2022-07-27 00:00:00+0900"
+  job_interval: 3600
+  job_timeout: 3600

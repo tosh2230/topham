@@ -1,0 +1,3 @@
+slack_private:
+  url: foo/bar
+  header: title
