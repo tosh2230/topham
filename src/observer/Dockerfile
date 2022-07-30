@@ -1,9 +1,9 @@
-FROM google/cloud-sdk:392.0.0-slim
+FROM google/cloud-sdk:395.0.0-slim
 
-RUN pip3 install fastapi uvicorn
+COPY requirements.txt /
+RUN pip3 install -r requirements.txt
 
 EXPOSE 80
 
-COPY ./app /app
-
+COPY app /app
 CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
