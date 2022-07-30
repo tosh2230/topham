@@ -9,3 +9,6 @@ format:
 	poetry run black src tests
 test:
 	@poetry run pytest tests -v --cov=src
+run-observer:
+	docker build -t topham-observer src/observer
+	docker run --rm --name topham-observer -p 80:80 -v ${PWD}/config:/app/config topham-observer
